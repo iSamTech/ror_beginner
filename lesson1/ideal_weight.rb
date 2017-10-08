@@ -9,10 +9,14 @@ name = gets.chomp
 name.capitalize!
 
 puts "Какой у тебя рост?"
-height = Integer(gets.chomp)
+height = gets.to_i
 
 # Расичитываем и показывем идеальный вес
-puts "Благодарим за информацию, #{name}. Ваш идеальный вес #{height - 110}кг."
+if height - 110 > 0
+  puts "Благодарим за информацию, #{name}. Ваш идеальный вес #{height - 110}кг."
+else
+  puts "Благодарим за информацию, #{name}. Ваш вес уже оптимальный."
+end
 
 
 
